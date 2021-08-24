@@ -5,7 +5,7 @@ import java.math.BigDecimal;
 public class UpdateBookDTO {
     private String title;
     private String author;
-    private BigDecimal price;
+    private Double price;
 
     public String getTitle() {
         return title;
@@ -23,11 +23,11 @@ public class UpdateBookDTO {
         this.author = author;
     }
 
-    public BigDecimal getPrice() {
+    public Double getPrice() {
         return price;
     }
 
-    public void setPrice(BigDecimal price) {
+    public void setPrice(Double price) {
         this.price = price;
     }
 }

@@ -1,6 +1,8 @@
 package br.com.rubinhomaroti.bookstore.bookstore.dto;
 
-import java.math.BigDecimal;
+import br.com.rubinhomaroti.bookstore.bookstore.entity.Book;
+
+import java.util.Date;
 
 /* DTO - Data Transfer Object
 - Representa o objeto que será mapeado entre as requisições
@@ -11,8 +13,18 @@ public class BookDTO {
     private String isbn;
     private String title;
     private String author;
-    private BigDecimal price;
+    private Double price;
+    private Date publishedAt;
 
+    public BookDTO() {}
+
+    public BookDTO(Book book) {
+        this.isbn = book.getIsbn();
+        this.title = book.getTitle();
+        this.author = book.getAuthor();
+        this.price = book.getPrice();
+        this.publishedAt = book.getPublishedAt();
+    }
 
     public String getIsbn() {
         return isbn;
@@ -38,11 +50,15 @@ public class BookDTO {
         this.author = author;
     }
 
-    public BigDecimal getPrice() {
+    public Double getPrice() {
         return price;
     }
 
-    public void setPrice(BigDecimal price) {
+    public void setPrice(Double price) {
         this.price = price;
     }
+
+    public Date getPublishedAt() { return publishedAt; }
+
+    public void setPublishedAt(Date publishedAt) { this.publishedAt = publishedAt; }
 }

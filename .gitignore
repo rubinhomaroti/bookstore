@@ -35,3 +35,5 @@ out/
 
 ### VS Code ###
 .vscode/
+/db/BookstoreDb.mv.db
+/db/BookstoreDb.trace.db
