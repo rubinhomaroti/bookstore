@@ -21,9 +21,8 @@ public class BookstoreController {
 
     @GetMapping
     public List<BookDTO> getBooks(
-            @RequestParam(required = false, value = "titulo") String title,
-            @RequestParam(required = false, value = "autor") String author) {
-        return bookstoreService.listBooks(title, author);
+            @RequestParam(required = false, value = "titulo") String title) {
+        return bookstoreService.listBooks(title);
     }
 
     @GetMapping("{id}")

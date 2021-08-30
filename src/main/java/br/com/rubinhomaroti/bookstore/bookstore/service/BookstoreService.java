@@ -7,7 +7,7 @@ import br.com.rubinhomaroti.bookstore.bookstore.dto.UpdateBookPriceDTO;
 import java.util.List;
 
 public interface BookstoreService {
-    List<BookDTO> listBooks(String title, String author);
+    List<BookDTO> listBooks(String title);
     BookDTO findById(Long id);
     BookDTO createBook(BookDTO newBookDTO);
     BookDTO updateBook(Long id, UpdateBookDTO newBookDTO);

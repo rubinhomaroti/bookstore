@@ -8,7 +8,7 @@ import java.util.List;
 
 public interface BookstoreRepository extends JpaRepository<Book, Long> {
 
-    List<Book> findAllByTitleLikeOrAuthorLike(String title, String author);
+    List<Book> findAllByTitleLike(String title);
 
     // Mesma função do método acima, apenas exemplficando como seria utilizando direct query
     @Query("select b from Book b where b.title like :title or b.author like :author")

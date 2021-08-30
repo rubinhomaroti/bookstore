@@ -21,16 +21,13 @@ public class BookstoreServiceImpl implements BookstoreService {
     }
 
     @Override
-    public List<BookDTO> listBooks(String title, String author) {
+    public List<BookDTO> listBooks(String title) {
         if (title == null) {
             title = "";
         }
 
-        if (author == null) {
-            author = "";
-        }
+        List<Book> books = bookstoreRepository.findAllByTitleLike("%" + title + "%");
 
-        List<Book> books = bookstoreRepository.findAllByTitleLikeOrAuthorLike(title, author);
         return books.stream()
                 .map(BookDTO::new)
                 .collect(Collectors.toList());
