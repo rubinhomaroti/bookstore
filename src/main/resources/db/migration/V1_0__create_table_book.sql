@@ -6,4 +6,8 @@ CREATE TABLE tb_book (
     price DECIMAL NOT NULL,
     published_at DATETIME NOT NULL,
     primary key (id)
-)
+);
+
+INSERT INTO tb_book (isbn, title, author, price, published_at) values
+('3647231848', 'Ensaio sobre a cegueira', 'José Saramago', 49.90, '1990-01-27T23:41:58.674Z'),
+('8919471329', 'A volta ao mundo em 80 dias', 'Jules Verne', 39.90, '1999-01-27T00:00:00.000Z');
